@@ -1,14 +1,14 @@
 {
-  "location": "",
-  "email": "",
-  "goal": "",
-  "programming_languages": "",
-  "current_job": "",
-  "laptop": "",
-  "english": "",
-  "education": "",
-  "phone_number": "",
-  "age": 0,
-  "past_job_experience": "",
-  "url_to_repo": ""
+  "location": "Minsk",
+  "email": "nemanwir@gmail.com",
+  "goal": "Understanding and experience of DevOps practices",
+  "programming_languages": "Java ",
+  "current_job": "junior java developer",
+  "laptop": "yes",
+  "english": "a2",
+  "education": "Educational Center of HTP - Java enterprise development",
+  "phone_number": "+37525 9385094",
+  "age": 31,
+  "past_job_experience": "     ",
+  "url_to_repo": "https://github.com/Alex-Wir/profile_app/"
 }
