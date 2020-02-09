@@ -10,8 +10,18 @@ jobs:
       - run: gem install json-schema
       - run: gem install rspec
       - run: rspec
+  rubocop:
+    docker:
+      - image: circleci/ruby:2.4.1
+    steps:
+      - checkout
+      - run: gem install rubocop
+      - run: rubocop
 workflows:
   version: 2
   pipeline:
     jobs:
       - rspec
+      - rubocop:
+          requires:
+            - rspec
