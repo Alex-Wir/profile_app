@@ -7,7 +7,7 @@ set :show_exceptions, false
 
 PROFILE_PATH = 'config/profile.json'
 
-class InvalidProfileError< StandardError; end
+class InvalidProfileError < StandardError; end
 
 before do
   content_type :json
@@ -25,9 +25,9 @@ get '/' do
 end
 
 error InvalidProfileError do
-  { status: 'invalid profile'}.to_json
+  { status: 'invalid profile' }.to_json
 end
 
 not_found do
-  {status: 'invalid path' }.to_json
+  { status: 'invalid path' }.to_json
 end
