@@ -1,0 +1,17 @@
+version: 2
+jobs:
+  rspec:
+    docker:
+      - image: circleci/ruby:2.4.1
+    steps:
+      - checkout
+      - run: gem install sinatra
+      - run: gem install rack-test
+      - run: gem install json-schema
+      - run: gem install rspec
+      - run: rspec
+workflows:
+  version: 2
+  pipeline:
+    jobs:
+      - rspec
