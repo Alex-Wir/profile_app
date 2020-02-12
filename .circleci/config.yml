@@ -1,4 +1,8 @@
-version: 2
+version: 2.1
+
+orbs:
+  heroku: circleci/heroku@1.0.1
+
 jobs:
   rspec:
     docker:
@@ -17,6 +21,13 @@ jobs:
       - checkout
       - run: gem install rubocop
       - run: rubocop
+  deploy:
+    executor: heroku/default
+    steps:
+      - checkout
+      - heroku/install
+      - heroku/deploy-via-git
+
 workflows:
   version: 2
   pipeline:
@@ -25,3 +36,6 @@ workflows:
       - rubocop:
           requires:
             - rspec
+      - deploy:
+          requires:
+            - rubocop
